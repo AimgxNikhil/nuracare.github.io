@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>NeuraCare — Face + Text Mood (Option C)</title>
+<link rel="stylesheet" href="/static/css/style.css" />
+<style>
+
+/* small overrides */
+.camera-row { display:flex; gap:16px; align-items:flex-start; margin-top:14px; flex-wrap:wrap; }
+#videoEl { width:340px; height:255px; background:#111; border-radius:10px; border:1px solid rgba(255,255,255,0.06); }
+#avatarWrap { width:260px; display:flex; flex-direction:column; align-items:center; gap:10px; padding:12px; background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border-radius:12px; }
+#avatarSVG { width:140px; height:140px; }
+#scanEmoji { font-size:48px; }
+.smallNote { font-size:0.85rem; opacity:0.9; text-align:center; }
+.controlRow { display:flex; gap:10px; margin-top:12px; }
+.themeHappy { --accent: #6be56b; }
+.themeSad { --accent: #6b9ef5; }
+.themeStress { --accent: #ffb86b; }
+</style>
+</head>
+<body>
+<div class="container" id="appContainer">
+  <header>
+    <div class="logo">NC</div>
+    <div>
+      <h1>NeuraCare</h1>
+      <p class="lead">Face + Text AI mood detector animated avatar, combined suggestions, and polished UI.</p>
+    </div>
+  </header>
+
+  <div class="main-grid">
+    <div>
+      <textarea id="userText" placeholder="Type your feelings... e.g. 'I feel frustrated and tired'"></textarea>
+
+      <div class="controlRow">
+        <button class="btn" id="analyzeBtn">Analyze Mood</button>
+        <button class="btn secondary" id="clearBtn">Clear</button>
+        <!-- <button class="btn secondary" id="toggleThemeBtn">Toggle Theme</button> -->
+      </div>
+
+      <div id="loader" class="loader" aria-hidden="true" style="display:none;"></div>
+
+      <div class="camera-row">
+        <video id="videoEl" autoplay muted playsinline></video>
+
+        <div id="avatarWrap">
+          <div id="scanEmoji">🙂</div>
+
+          <!-- Animated SVG avatar (eyes + mouth change) -->
+          <svg id="avatarSVG" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#ffd86b"/><stop offset="1" stop-color="#ff9a9e"/></linearGradient>
+            </defs>
+            <rect x="0" y="0" width="200" height="200" rx="24" fill="url(#g1)" opacity="0.95"/>
+            <g id="face" transform="translate(0,10)">
+              <circle cx="100" cy="100" r="52" fill="#fff" opacity="0.95"/>
+              <g id="eyes">
+                <ellipse id="eyeLeft" cx="78" cy="92" rx="8" ry="6" fill="#111"/>
+                <ellipse id="eyeRight" cx="122" cy="92" rx="8" ry="6" fill="#111"/>
+              </g>
+              <g id="mouth">
+                <path id="mouthPath" d="M80 120 Q100 128 120 120" stroke="#111" stroke-width="4" fill="transparent" stroke-linecap="round"/>
+              </g>
+            </g>
+          </svg>
+
+          <div class="smallNote">Avatar reacts to detected mood.</div>
+          <div style="display:flex; gap:8px; margin-top:8px;">
+            <button id="startCamBtn" class="btn">Start Camera Scan</button>
+            <button id="stopCamBtn" class="btn secondary" style="display:none;">Stop</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-box panel" id="resultBox" role="status" aria-live="polite" style="display:none;">
+        <div id="emojiDisplay" style="font-size:48px; margin-bottom:8px;"></div>
+        <div class="result-title" id="resultTitle"></div>
+        <div class="tags" id="resultTags"></div>
+        <ul class="suggestions" id="suggestionsList"></ul>
+        <div style="margin-top:10px;">
+          <button class="btn secondary" id="downloadReport">Download Report</button>
+        </div>
+      </div>
+    </div>
+
+    <aside>
+      <div class="panel">
+        <h3 style="margin-bottom:8px;">How it works</h3>
+        <p style="font-size:0.95rem; opacity:0.95;">This demo combines live face-emotion detection (in-browser via face-api.js) with text-based sentiment rules. The avatar animates based on mood and the UI theme subtly shifts.</p>
+        <p style="font-size:0.9rem; margin-top:8px;"><strong>Privacy:</strong> Face models run locally in the browser. No images are uploaded unless you explicitly upload them (not enabled here).</p>
+      </div>
+
+      <div class="panel" style="margin-top:14px;">
+        <h3 style="margin-bottom:8px;">Tips</h3>
+        <ul style="font-size:0.95rem; opacity:0.95; padding-left:18px; margin-top:6px;">
+          <li>Allow camera permission and ensure decent lighting.</li>
+          <li>Combine face scan with typed text for more accurate suggestions.</li>
+          <li>Place face around center of camera for best results.</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- face-api.js -->
+<script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+<script src="/static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+[
+  {
+    "text": "i am tired",
+    "result": {
+      "tags": [
+        "Burnout"
+      ],
+      "suggestions": [
+        "Take a 5-minute deep breathing break.",
+        "Try the 4-7-8 breathing technique.",
+        "Schedule a 30-minute rest after current task."
+      ]
+    },
+    "timestamp": "2025-11-15T05:11:28.753621Z"
+  },
+  {
+    "text": "i am sad",
+    "result": {
+      "tags": [
+        "Low Mood"
+      ],
+      "suggestions": [
+        "Listen to calming music for 10 minutes.",
+        "Reach out to a friend or write a short journal."
+      ]
+    },
+    "timestamp": "2025-11-15T05:20:04.507336Z"
+  },
+  {
+    "text": "happy",
+    "result": {
+      "tags": [
+        "Positive / Neutral"
+      ],
+      "suggestions": [
+        "Maintain your routine and take regular breaks."
+      ]
+    },
+    "timestamp": "2025-11-15T05:31:40.972863Z"
+  },
+  {
+    "text": "tired",
+    "result": {
+      "tags": [
+        "Burnout"
+      ],
+      "suggestions": [
+        "Take a 5-minute deep breathing break.",
+        "Try the 4-7-8 breathing technique.",
+        "Schedule a 30-minute rest after current task."
+      ]
+    },
+    "timestamp": "2025-11-15T05:31:53.502101Z"
+  },
+  {
+    "text": "happy",
+    "result": {
+      "tags": [
+        "Positive / Neutral"
+      ],
+      "suggestions": [
+        "Maintain your routine and take regular breaks."
+      ]
+    },
+    "timestamp": "2025-11-15T05:32:55.195182Z"
+  },
+  {
+    "text": "sad",
+    "result": {
+      "tags": [
+        "Low Mood"
+      ],
+      "suggestions": [
+        "Listen to calming music for 10 minutes.",
+        "Reach out to a friend or write a short journal."
+      ]
+    },
+    "timestamp": "2025-11-15T05:33:00.987285Z"
+  },
+  {
+    "text": "i am sad",
+    "result": {
+      "tags": [
+        "Low Mood"
+      ],
+      "suggestions": [
+        "Listen to calming music for 10 minutes.",
+        "Reach out to a friend or write a short journal."
+      ]
+    },
+    "timestamp": "2025-11-15T05:57:38.782073Z"
+  },
+  {
+    "text": "i am sad",
+    "result": {
+      "tags": [
+        "Low Mood"
+      ],
+      "suggestions": [
+        "Listen to calming music for 10 minutes.",
+        "Reach out to a friend or write a short journal."
+      ]
+    },
+    "timestamp": "2025-11-15T07:22:07.372474Z"
+  },
+  {
+    "text": "sad",
+    "result": {
+      "tags": [
+        "Low Mood"
+      ],
+      "suggestions": [
+        "Listen to calming music for 10 minutes.",
+        "Reach out to a friend or write a short journal."
+      ]
+    },
+    "timestamp": "2025-11-15T09:17:15.379924Z"
+  },
+  {
+    "text": "true",
+    "result": {
+      "tags": [
+        "Positive / Neutral"
+      ],
+      "suggestions": [
+        "Maintain your routine and take regular breaks."
+      ]
+    },
+    "timestamp": "2025-11-15T09:36:04.908345Z"
+  },
+  {
+    "text": "nothhhhh",
+    "result": {
+      "tags": [
+        "Positive / Neutral"
+      ],
+      "suggestions": [
+        "Maintain your routine and take regular breaks."
+      ]
+    },
+    "timestamp": "2025-11-15T09:36:16.883825Z"
+  },
+  {
+    "text": "i am feeling angry",
+    "result": {
+      "tags": [
+        "Stress"
+      ],
+      "suggestions": [
+        "Do a short grounding exercise (5 mins)."
+      ]
+    },
+    "timestamp": "2025-11-15T09:39:54.751831Z"
+  },
+  {
+    "text": "hello i am happy",
+    "result": {
+      "tags": [
+        "Positive / Neutral"
+      ],
+      "suggestions": [
+        "Maintain your routine and take regular breaks."
+      ]
+    },
+    "timestamp": "2025-11-15T09:50:42.356167Z"
+  },
+  {
+    "text": "now sad",
+    "result": {
+      "tags": [
+        "Low Mood"
+      ],
+      "suggestions": [
+        "Listen to calming music for 10 minutes.",
+        "Reach out to a friend or write a short journal."
+      ]
+    },
+    "timestamp": "2025-11-15T09:51:19.466381Z"
+  },
+  {
+    "text": "sad",
+    "result": {
+      "tags": [
+        "Low Mood"
+      ],
+      "suggestions": [
+        "Listen to calming music for 10 minutes.",
+        "Reach out to a friend or write a short journal."
+      ]
+    },
+    "timestamp": "2025-11-15T16:44:32.232210Z"
+  },
+  {
+    "text": "i am sad now",
+    "result": {
+      "tags": [
+        "Low Mood"
+      ],
+      "suggestions": [
+        "Listen to calming music for 10 minutes.",
+        "Reach out to a friend or write a short journal."
+      ]
+    },
+    "timestamp": "2025-11-16T05:22:19.745776Z"
+  },
+  {
+    "text": "sad",
+    "result": {
+      "tags": [
+        "Low Mood"
+      ],
+      "suggestions": [
+        "Listen to calming music for 10 minutes.",
+        "Reach out to a friend or write a short journal."
+      ]
+    },
+    "timestamp": "2025-11-16T13:48:50.086738Z"
+  },
+  {
+    "text": "sad",
+    "result": {
+      "tags": [
+        "Low Mood"
+      ],
+      "suggestions": [
+        "Listen to calming music for 10 minutes.",
+        "Reach out to a friend or write a short journal."
+      ]
+    },
+    "timestamp": "2025-11-17T12:33:12.702125Z"
+  }
+]
